@@ -1,0 +1,5 @@
+2017-02-24 20:54:47,604[5] INFO  ResolverTest.Filters.GenericAuthenticationFilter - Start of authentication: System.Web.Http.Controllers.HttpActionContext
+2017-02-24 20:56:48,593[11] INFO  ResolverTest.Filters.GenericAuthenticationFilter - Start of authentication: System.Web.Http.Controllers.HttpActionContext
+2017-02-24 20:56:48,594[11] INFO  ResolverTest.Filters.GenericAuthenticationFilter - Request header info: Basic
+2017-02-24 20:56:48,594[11] INFO  ResolverTest.Filters.GenericAuthenticationFilter - Request Auth header value info: YWtoaWw6YWtoaWw=
+2017-02-24 20:56:48,594[11] INFO  ResolverTest.Filters.GenericAuthenticationFilter - Getting authentication header info: akhil:akhil

@@ -1,0 +1,40 @@
+﻿<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            <nav class="navbar navbar-default navbar-fixed-top" *ngIf="getHeader()">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button (click)="openmobilemenu()" type="button" [ngClass]="(mobilemenuopened === true) ? 'navbar-toggle':'navbar-toggle collapsed'" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand">CloudKase</a>
+                    </div>
+                    <div id="navbar" [ngClass]="(mobilemenuopened === true) ? 'navbar-collapse collapse in':'navbar-collapse collapse'">
+                        <ul class="nav navbar-nav">
+                            <li [ngClass]="(activeTab === 'H') ? 'active' : ''"><a (click)="setActiveTab('H')">Home</a></li>
+                            <li [ngClass]="(activeTab === 'A') ? 'active' : ''"><a (click)="setActiveTab('A')">About</a></li>
+                            <li [ngClass]="(activeTab === 'C') ? 'active' : ''"><a (click)="setActiveTab('C')">Contact</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li [ngClass]="(menuopened === true) ? 'dropdown open':'dropdown'" id="toggelmenu">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   (click)="openmenu()" aria-expanded="false">{{currentUser.username}}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a>Product List</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a [routerLink]="['/login']">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+            <alert></alert>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
